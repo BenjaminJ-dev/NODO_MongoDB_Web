@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#122b3f"><title>NODO | Centro de inventario</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#122b3f"><title>NODO | Centro de inventario</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="app-shell">
@@ -22,7 +22,7 @@
   </aside>
 
   <main class="main-area" id="inicio">
-<header class="topbar"><div class="breadcrumbs"><span>Operaciones</span><i>/</i><b>Centro de inventario</b></div><div class="top-actions"><div class="system-status"><span></span><b id="connectionLabel">Conectando</b><small>Estado de base de datos</small></div><button class="icon-button" id="refreshButton" aria-label="Actualizar datos" title="Actualizar">↻</button><div class="top-avatar">OP</div></div></header>
+    <header class="topbar"><div class="breadcrumbs"><span>Operaciones</span><i>/</i><b>Centro de inventario</b></div><div class="top-actions"><div class="system-status"><span></span><b id="connectionLabel">Conectando</b><small>Estado de base de datos</small></div><button class="icon-button" id="refreshButton" aria-label="Actualizar datos" title="Actualizar">↻</button><div class="top-avatar">OP</div></div></header>
     <div class="page-content">
       <section class="page-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span>VISTA GENERAL</p><h1>Centro de inventario</h1><p class="page-subtitle">Una lectura clara de lo que tienes, lo que falta y lo que debes mover.</p></div><button class="primary-button" id="newOrderButton"><span>＋</span> Registrar pedido</button></section>
 
@@ -45,6 +45,6 @@
     </div>
   </main>
 </div>
-<dialog id="orderDialog"><form method="dialog" id="orderForm"><button class="dialog-close" value="cancel" aria-label="Cerrar">×</button><div class="dialog-mark">＋</div><p class="eyebrow">OPERACIÓN DE INVENTARIO</p><h2 id="orderProductName">Registrar pedido</h2><p id="orderStockInfo" class="dialog-info">Selecciona el producto y las unidades.</p><label>Cliente<select id="customerSelect"><option value="1">Juan Pérez</option><option value="2">María Soto</option><option value="3">Diego Rojas</option><option value="4">Camila Vidal</option><option value="5">Sofía Torres</option></select></label><label id="productField">Producto<select id="orderProductSelect"></select></label><label>Cantidad<input id="quantityInput" type="number" value="1" min="1" required></label><p id="orderMessage" class="message" role="status"></p><div class="dialog-actions"><button class="secondary-button" value="cancel">Cancelar</button><button class="primary-button" id="submitOrder" type="submit">Confirmar pedido <span>→</span></button></div></form></dialog>
+<dialog id="orderDialog"><form method="dialog" id="orderForm"><button class="dialog-close" type="button" value="cancel" aria-label="Cerrar" onclick="this.closest('dialog').close()">×</button><div class="dialog-mark">＋</div><p class="eyebrow">OPERACIÓN DE INVENTARIO</p><h2 id="orderProductName">Registrar pedido</h2><p id="orderStockInfo" class="dialog-info">Selecciona el producto y las unidades.</p><label>Cliente<select id="customerSelect"><option value="1">Juan Pérez</option><option value="2">María Soto</option><option value="3">Diego Rojas</option><option value="4">Camila Vidal</option><option value="5">Sofía Torres</option></select></label><label id="productField">Producto<select id="orderProductSelect"></select></label><label>Cantidad<input id="quantityInput" type="number" value="1" min="1" required></label><p id="orderMessage" class="message" role="status"></p><div class="dialog-actions"><button class="secondary-button" type="button" onclick="this.closest('dialog').close()">Cancelar</button><button class="primary-button" id="submitOrder" type="submit">Confirmar pedido <span>→</span></button></div></form></dialog>
 <div id="toast" class="toast" role="status"></div><script src="app.js"></script>
 </body></html>
